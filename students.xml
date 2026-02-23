@@ -1,0 +1,16 @@
+<!-- student Objects-->
+<student> 
+    <name>Teja</name> 
+    <date_of_birth>1996-07-27</date_of_birth>
+    <age>28</age> 
+    <major>DevOps</major> 
+    <mail> learnx.devops@gmail.com</mail>   
+    <!-- Address of the student -->
+    <address>
+        <street>123 Main St</street>
+        <city>Hyderabad</city>
+        <state>Telangana</state>
+        <zip>500001</zip>
+    </address>
+</student>
+

@@ -1,0 +1,18 @@
+{
+    "firstname": "Teja",
+    "lastname": "Destin",
+    "age": 28,
+    "courses": [
+        {
+            "type": "course",
+            "name": "DevOps",
+            "duration": "3 months"
+        },
+
+        {
+            "type": "course",
+            "name": "Python Programming",
+            "duration": "2 months"
+        }
+    ]    
+}

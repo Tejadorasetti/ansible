@@ -1,0 +1,14 @@
+- name: "Teja Destin"
+  age: 22
+  course: "MCA 2nd year"
+- addresses:
+  - permanent:
+      street: "Madhapur"
+      city: "Hyderabad"
+      state: "Telangana"
+      country: "India"
+  - current:
+      street: "Madhapur"
+      city: "Hyderabad"
+      state: "Telangana"
+      country: "India"

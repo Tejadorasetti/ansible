@@ -1,5 +1,6 @@
 - name: "ping the server"
   hosts: "webservers"
+  become: true
   tasks:
     - name: "print the message"
       ansible.builtin.debug:

@@ -1,0 +1,6 @@
+- name: "ping the server"
+  hosts: "webservers"
+  tasks:
+    - name: "print the message"
+      ansible.builtin.debug:
+        msg: "Hello, the server is up and running!"

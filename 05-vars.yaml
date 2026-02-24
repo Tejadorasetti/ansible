@@ -3,13 +3,13 @@
   connection: local
   vars:
     name: "Teja Destin"
-    age: 22
-    course: "DevOps"
+    age: 27
+    course: "AWS"
   tasks:
     - name: "print the message"
       vars:
-        name: "Teja Destin"
-        age: 22
-        course: "MCA 2nd year"
+        name: "Teja"
+        age: 28
+        course: "DevOps"
       ansible.builtin.debug:
         msg: "My name is {{ name }}, I am {{ age }} years old and I am pursuing {{ course }}."

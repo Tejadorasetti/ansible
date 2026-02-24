@@ -1,7 +1,8 @@
 - name: play level variables 
   hosts: localhost
   connection: local
-  vars: "{{ lookup('file', 'course.yaml') | from_yaml }}"
+  vars_files:
+    - course.yaml
   tasks:
     - name: "print the message"
       vars:

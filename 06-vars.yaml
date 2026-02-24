@@ -1,0 +1,12 @@
+- name: play level variables 
+  hosts: localhost
+  connection: local
+  vars: "{{ lookup('file', 'course.yaml') | from_yaml }}"
+  tasks:
+    - name: "print the message"
+      vars:
+        name: "Teja"
+        age: 28
+        course: "DevOps"
+      ansible.builtin.debug:
+        msg: "My name is {{ name }}, I am {{ age }} years old and I am pursuing {{ course }}."

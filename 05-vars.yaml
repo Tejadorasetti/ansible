@@ -1,0 +1,15 @@
+- name: play level variables 
+  hosts: localhost
+  connection: local
+  vars:
+    name: "Teja Destin"
+    age: 22
+    course: "DevOps"
+  tasks:
+    - name: "print the message"
+      vars:
+        name: "Teja Destin"
+        age: 22
+        course: "MCA 2nd year"
+      ansible.builtin.debug:
+        msg: "My name is {{ name }}, I am {{ age }} years old and I am pursuing {{ course }}."

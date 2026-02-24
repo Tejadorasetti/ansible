@@ -1,5 +1,6 @@
 - name: play level variables 
   hosts: localhost
+  connection: local
   vars:
     name: "Teja Destin"
     age: 22

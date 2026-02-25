@@ -1,6 +1,6 @@
 - name: demo on data types
   hosts: localhost
-  connection: local
+  connection: localhost
   vars:
     PROGRAM: "DevSecOps with AWS" # string
     DURATION: 6 # int/number

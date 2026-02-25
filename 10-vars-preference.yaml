@@ -13,10 +13,6 @@
   - name: NAME
     prompt: "Please enter your name"
     private: no
-    age: "Please enter your age"
-    private: yes
-    course: "Please enter your course"
-    private: no
 
   tasks:
     - name: "print the message"

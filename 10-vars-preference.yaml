@@ -1,0 +1,24 @@
+- name: varibale preference
+  hosts: localhost
+  connection: local
+  vars:
+    name: "Teja"
+    age: 28
+    course: "DevOps"
+
+  vars_files:
+    - course.yaml  
+
+  vars_prompt:
+    name: "Please enter your name"
+    private: no
+    age: "Please enter your age"
+    private: yes
+    course: "Please enter your course"
+    private: no
+
+  tasks:
+    - name: "print the message"
+      ansible.builtin.debug:
+        msg: "My name is {{ name }}"
+        

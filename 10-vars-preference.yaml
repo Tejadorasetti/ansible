@@ -2,7 +2,7 @@
   hosts: localhost
   connection: local
   vars:
-    NAME: "Teja"
+    NAME: "ansible from playbook"
     age: 28
     course: "DevOps"
 
@@ -10,7 +10,8 @@
     - course.yaml  
 
   vars_prompt:
-    NAME: "Please enter your name"
+  - name: NAME
+    prompt: "Please enter your name"
     private: no
     age: "Please enter your age"
     private: yes
@@ -19,5 +20,7 @@
 
   tasks:
     - name: "print the message"
+      var:
+        NAME: "ansible from task"
       ansible.builtin.debug:
-        msg: "My name is {{ NAME }}"  
+        msg: "My name is {{ NAME }}"

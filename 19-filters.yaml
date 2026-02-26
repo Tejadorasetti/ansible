@@ -3,10 +3,10 @@
   connection: local
   vars: 
     topics: ansible, devops, automation #string to list
-
-  tags: ansible
-  project: roboshop
-  component: catalog  
+    tags: 
+    name: ansible
+    project: roboshop
+    component: catalog  
 
   tasks: 
   - name: greetings

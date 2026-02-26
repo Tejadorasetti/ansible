@@ -2,6 +2,6 @@
   hosts: localhost 
   connection: local
   tasks: 
-- name: greetings
-  ansible.builtin.debug:
-  msg: "Hello, {{ GREETINGS | default('good morning') }}!" # if GREETINGS variable is not defined, it will print world
+  - name: greetings
+    ansible.builtin.debug:
+    msg: "Hello, {{ GREETINGS | default('good morning') }}!" # if GREETINGS variable is not defined, it will print world

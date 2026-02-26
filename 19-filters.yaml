@@ -4,4 +4,4 @@
   tasks: 
 - name: greetings
   ansible.builtin.debug:
-  msg: "Hello, {{ GREETINGS }}"
+  msg: "Hello, {{ GREETINGS | default('good morning') }}!" # if GREETINGS variable is not defined, it will print world

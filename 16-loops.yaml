@@ -1,0 +1,13 @@
+- name: demo for loops
+  hosts: localhost 
+  connection: local
+  tasks:
+    - name: print numbers from 1 to 5
+      ansible.builtin.debug:
+        msg: "Number is {{ item }}"
+      loop: 
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5

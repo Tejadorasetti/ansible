@@ -4,9 +4,9 @@
   vars: 
     topics: ansible, devops, automation #string to list
     tags: 
-    name: ansible
-    project: roboshop
-    component: catalog  
+      name: ansible
+      project: roboshop
+      component: catalog  
 
   tasks: 
   - name: greetings

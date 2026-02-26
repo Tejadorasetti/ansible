@@ -1,7 +1,13 @@
 - name: demo for filters
   hosts: localhost 
   connection: local
+  vars: 
+    topics: ansible, devops, automation #string to list
   tasks: 
   - name: greetings
     ansible.builtin.debug:
-    msg: "Hello, {{ GREETINGS | default('good morning') }}!" # if GREETINGS variable is not defined, it will print world
+     msg: "Hello, {{ GREETINGS | default('good morning') }}!" # if GREETINGS variable is not defined, it will print world
+
+  - name: coverting string to list
+    ansible.builtin.debug:
+     msg: "Topics are {{ topics | split(',') }}" # split filter to convert string to list

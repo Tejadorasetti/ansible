@@ -1,0 +1,11 @@
+- name: anisble command vs sell module
+  hosts: localhost 
+  connection: local
+  tasks:
+    - name: using module test
+      ansible.builtin.command: cat /etc/passwd | grep root
+      register: command_output
+
+    - name: print command output
+      ansible.builtin.debug:
+        msg: "{{ command_output.stdout }}"

@@ -3,11 +3,20 @@
   connection: local
   vars: 
     topics: ansible, devops, automation #string to list
+
+  tags: ansible
+  project: roboshop
+  component: catalog  
+
   tasks: 
   - name: greetings
     ansible.builtin.debug:
      msg: "Hello, {{ GREETINGS | default('good morning') }}!" # if GREETINGS variable is not defined, it will print world
 
-  - name: coverting string to list
+  - name: covert string to list
     ansible.builtin.debug:
      msg: "Topics are {{ topics | split(',') }}" # split filter to convert string to list
+
+  - name: covert map to list
+    ansible.builtin.debug:
+     msg: "Topics are {{ tags | dict2items | list }}" # split filter to convert string to list and list filter to convert map to list

@@ -3,11 +3,11 @@
   connection: local
   vars: 
     topics: ansible, devops, automation #string to list
-    tagsList: 
+    tagsMap: 
      name: ansible
      project: roboshop
      component: catalog  
-    tagsMap: 
+    tagsList: 
       name: ansible
       project: roboshop
       component: catalog
@@ -23,8 +23,8 @@
 
   - name: covert map to list
     ansible.builtin.debug:
-     msg: "Topics are {{ tagsList | dict2items }}" # split filter to convert string to list and list filter to convert map to list
+     msg: "Topics are {{ tagsMap | dict2items }}" # split filter to convert string to list and list filter to convert map to list
 
   - name: covert List to map
     ansible.builtin.debug:
-     msg: "Topics are {{ tagsMap | dict2items }}" # split filter to convert string to list and list filter to convert map to list and map filter to convert list to map
+     msg: "Topics are {{ tagsList | items2dict }}" # split filter to convert string to list and list filter to convert map to list and map filter to convert list to map

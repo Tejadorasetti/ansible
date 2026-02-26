@@ -8,9 +8,10 @@
      project: roboshop
      component: catalog  
     tagsList: 
-      name: ansible
-      project: roboshop
-      component: catalog
+      name: [{'key': 'name', 'value': 'ansible'}, 
+         {'key': 'project', 'value': 'roboshop'}, 
+         {'key': 'component', 'value': 'catalog'}
+      ]
 
   tasks: 
   - name: greetings

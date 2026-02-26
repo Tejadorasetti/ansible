@@ -2,6 +2,15 @@
   hosts: localhost 
   connection: local
   tasks:
+    - name: print names
+      ansible.builtin.debug:
+        msg: "Name is {{ item }}" # item is reserved keyword in ansible for loops
+      loop: 
+        - Teja
+        - utthej
+        - srujana
+        - anu
+  tasks:
     - name: print numbers from 1 to 5
       ansible.builtin.debug:
         msg: "Number is {{ item }}"

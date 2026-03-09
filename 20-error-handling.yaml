@@ -1,0 +1,11 @@
+- name: demo on error handling
+  hosts: localhost 
+  connection: local
+
+  tasks: 
+  - name: check user exist or not 
+    ansible.builtin.command: id -u ansible
+    register: user_output
+  - name: print the user_output
+    ansible.builtin.debug:
+     var: user_output

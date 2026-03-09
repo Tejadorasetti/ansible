@@ -6,6 +6,7 @@
   - name: check user exist or not 
     ansible.builtin.command: id -u ansible
     register: user_output
+    ignore_errors: true # if the command fails, it will ignore the error and continue with the next task
   - name: print the user_output
     ansible.builtin.debug:
-     var: user_output
+     msg: "{{ user_output }}"
